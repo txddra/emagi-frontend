@@ -12,17 +12,20 @@ if(arguments[0] === 'convert'){
 }
 // console.log(arguments)
 //to search the whole words array for the letters given
-if(arguments[0] === 'search'){
+else if(arguments[0] === 'search'){
 console.log(search(arguments.slice(1)))
 }
 //this one should select a random emoji, but since it's not given any arguments 
-if(arguments[0] === 'random'){
-    console.log(random(symbols[i]))
+else if(arguments[0] === 'random'){
+    console.log(random(symbols))
 }
-let notRandom = arguments[0] !== 'random';
-let notSearch = arguments[0] !== 'search';
-let notConvert = arguments[0] !== 'convert';
-if(notRandom||notSearch || notConvert){
-    console.log("Please input one of the following : *Random ,*Search, or *Convert")
+
+//error message when not given an argument 
+// let notRandom = arguments[0] !== 'random';
+// let notSearch = arguments[0] !== 'search';
+// let notConvert = arguments[0] !== 'convert';
+else{
+// notRandom||notSearch || notConvert
+    console.log("Please input one of the following : Random ,Search, or Convert before continuing")
 
 }
